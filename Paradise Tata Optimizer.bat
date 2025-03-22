@@ -81,8 +81,6 @@ if "%Comando%" equ "7" (goto:op7)
 if "%Comando%" equ "8" (goto:op8)
 
 :op1
-echo msgbox "Este processo ira otimizar o seu sistema desabilitando algumas funcionalidades de acessibilidade ajustando o tempo de resposta do mouse e melhorando a resposta do teclado Essas mudancas visam uma navegacao mais rapida e sem interrupcoes", vbinformation, "Paradise Optimizer Alert" > %temp%\mensagem.vbs
-start %temp%\mensagem1.vbs
 Reg.exe add "HKLM\SYSTEM\CurrentControlSet\Control\Power\PowerSettings\54533251-82be-4824-96c1-47b60b740d00\943c8cb6-6f93-4227-ad87-e9a3feec08d1" /v "Attributes" /t REG_DWORD /d "2" /f
 Reg.exe add "HKLM\SYSTEM\CurrentControlSet\Control\Power\PowerSettings\2a737441-1930-4402-8d77-b2bebba308a3\d4e98f31-5ffe-4ce1-be31-1b38b384c009\DefaultPowerSchemeValues\381b4222-f694-41f0-9685-ff5bb260df2e" /v "ACSettingIndex" /t REG_DWORD /d "0" /f
 Reg.exe add "HKLM\SYSTEM\CurrentControlSet\Control\Power\PowerSettings\2a737441-1930-4402-8d77-b2bebba308a3\d4e98f31-5ffe-4ce1-be31-1b38b384c009\DefaultPowerSchemeValues\381b4222-f694-41f0-9685-ff5bb260df2e" /v "DCSettingIndex" /t REG_DWORD /d "0" /f
@@ -145,8 +143,6 @@ Reg.exe add "HKLM\SYSTEM\ControlSet001\Control\Processor" /v "ProccesorLatencyTh
 call :menu
 
 :op2
-echo msgbox "Este processo ira otimizar o seu sistema desabilitando algumas funcionalidades de acessibilidade ajustando o tempo de resposta do mouse e melhorando a resposta do teclado Essas mudancas visam uma navegacao mais rapida e sem interrupcoes", vbinformation, "Paradise Optimizer Alert" > %temp%\mensagem.vbs
-start %temp%\mensagem1.vbs
 reg add "HKEY_CURRENT_USER\Control Panel\Accessibility\Keyboard Response" /v "Flags" /t REG_SZ /d "0" /f
 reg add "HKEY_CURRENT_USER\Control Panel\Mouse" /v "MouseHoverTime" /t REG_SZ /d "10" /f
 reg add "HKEY_CURRENT_USER\Control Panel\Accessibility\MouseKeys" /v "Flags" /t REG_SZ /d "0" /f
@@ -156,8 +152,6 @@ reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\kbdclass\Parameter
 reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\mouclass\Parameters" /v "MouseDataQueueSize" /t REG_DWORD /d "32" /f
 
 :op3
-echo msgbox "Este processo ira otimizar o seu sistema desabilitando algumas funcionalidades de acessibilidade ajustando o tempo de resposta do mouse e melhorando a resposta do teclado Essas mudancas visam uma navegacao mais rapida e sem interrupcoes", vbinformation, "Paradise Optimizer Alert" > %temp%\mensagem.vbs
-start %temp%\mensagem1.vbs
 Reg add "HKLM\Software\Policies\Microsoft\Windows Defender\Real-Time Protection" /v "DisableRealtimeMonitoring" /t REG_DWORD /d 1 /f
 Reg.exe add "HKLM\SOFTWARE\Policies\Microsoft\Windows Defender\Spynet" /v "SpyNetReporting" /t REG_DWORD /d 0 /f
 Reg.exe add "HKLM\SOFTWARE\Policies\Microsoft\Windows Defender\Spynet" /v "SubmitSamplesConsent" /t REG_DWORD /d 2 /f
@@ -229,22 +223,16 @@ Reg.exe add "HKCU\Control Panel\International\User Profile" /v "HttpAcceptLangua
 call :menu
 
 :op5
-echo msgbox "Em caso de duvidas, abra um ticket de suporte ou entre em contato com @zwhitezinn_ para assistencia.", vbinformation, "Paradise Optimizer Alert" > %temp%\mensagem1.vbs
-start %temp%\mensagem1.vbs
 timeout /t 3 /nobreak > nul
 start https://www.youtube.com/watch?v=AfQx4z52oEk
 call :menu
 
 :op6
-echo msgbox "Em caso de duvidas, abra um ticket de suporte ou entre em contato com @zwhitezinn_ para assistencia.", vbinformation, "Paradise Optimizer Alert" > %temp%\mensagem1.vbs
-start %temp%\mensagem1.vbs
 timeout /t 3 /nobreak > nul
 start https://www.youtube.com/watch?v=xMF0MK28nCY
 call :menu
 
 :op7
-echo msgbox "Me Conheca e saiba mais sobre o meu trabalho ", vbinformation, "Paradise Optimizer Social" > %temp%\mensagem1.vbs
-start %temp%\mensagem1.vbs
 timeout /t 3 /nobreak > nul
 start https://kzwhitezinn.github.io/55/
 start https://memphis-ctrl.github.io/
